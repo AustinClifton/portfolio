@@ -1,0 +1,376 @@
+::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+body {
+  font-family: "Asar";
+  --yellow: #fbff00;
+  --spurs: #132257;
+  --green: #57eb64;
+  --red: #ca122b;
+
+  --excellus: #0099CC;
+  --rit: #F76902;
+  --tottenham: #132257;
+
+  padding: 0;
+  margin: 0;
+
+  color: black;
+  background: black;
+
+  overflow-x: hidden !important;
+
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+p {
+    line-height: 2.25rem;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    color: white;
+    text-decoration: none;
+    font-family: "Asar";
+}
+
+ul { /* for projects */
+  display: flex;
+  position: sticky;
+
+  top: 0;
+
+  list-style: none;
+}
+
+li { /* for projects */
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  list-style: none;
+}
+
+
+
+/* css for main progress bar on top of screen */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: black;
+    transform: scaleX(0);
+    transform-origin: 0%;
+
+    z-index: 1;
+}
+
+/* css for 100vh sections */
+#main-section,
+.aboutMeSection,
+.excellusSection,
+.classlistScroll,
+.skilllistScroll,
+footer {
+  position: relative;
+  height: 100vh;
+}
+
+/* css for first main section */
+.topBar {
+    display: flex;
+    justify-content: end;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 10vh;
+
+    margin: 2vh 3vh;
+}
+.icon {
+    height: 50px;
+    width: 50px;
+
+    margin: 0 0.5vw;
+}
+#main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    text-align: center;
+}
+#title {
+    margin: 0;
+
+    color: white;
+    font-size: 8em;
+    font-weight: 300;
+}
+#subtitle {
+    margin: 0;
+
+    color: #c9ac0b;
+    font-size: 2em;
+    font-weight: 300;
+
+    opacity: 0;
+}
+#animations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+
+  width: 50%;
+}
+.computerLottie {
+    grid-column: 1;
+
+    width: 250px;
+    height: 250px;
+}
+.globeLottie {
+    grid-column: 2;
+
+    height: 300px;
+    width: 300px;
+}
+
+
+
+/* css for 'about me' section */
+.aboutMeSection {
+    font-family: 'DM Serif Text', serif; /* CHANGED FONT */
+}
+.aboutMeInfo {
+    margin-left: 10vw;
+    width: 70vw;
+    height: 100vh;
+}
+.aboutMeInfo h2 {
+    margin: 0 0 0 0;
+    padding-top: 5vh;
+
+    color: #161538;
+    font-size: 4.5em;
+    
+}
+.aboutMeInfo sub {
+    margin: 0 0 0 5vw;
+
+    color: #3a3954;
+    font-size: 2em;
+}
+.aboutMeInfo p {
+    color: white;
+    font-size: 2.25em;
+    line-height: 1.25em;
+}
+
+
+
+/* css for excellus section */
+.excellusSection {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-row: 1fr;
+}
+.excellusImages {
+    grid-column: 1;
+}
+.excellusImage1 {
+    position: absolute;
+    top: 7vh;
+    left: 5vw;
+
+    height: 45vh;
+    width: 35vw;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.excellusImage2 {
+    position: absolute;
+    top: 47vh;
+    left: 15vw;
+
+    height: 45vh;
+    width: 43vw;
+
+    border: 1px solid black;
+}
+.excellusInfo {
+    font-size: 1.5em;
+    font-family: 'DM Serif Text', serif; /* CHANGED FONT */
+    text-align: center;
+
+    background: #0099CC;
+}
+.excellusInfo h3 {
+    color: white;
+    font-size: 3em;
+
+}
+.excellusInfo p {
+    margin: 5vh 5vw;
+
+    color: white;
+}
+.excellusLogo {
+    position: absolute;
+    bottom: -2vh;
+    right: 5vh;
+
+
+    height: 15vh;
+    width: 15vw;
+}
+
+
+/* css for skill/class words */
+.skillItem, .classItem {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+
+
+/* css for 'my work' section */
+.projectSection {
+    position: relative;
+    height: 500vh;
+
+    background: white;
+}
+.projectSection > h2 { /* 'My Work' */
+    position:sticky;
+    top: 5vh;
+
+    margin: 0 10vw;
+
+    color: var(--red);
+    font-size: 4em;
+}
+.projectContainer {
+    position: relative;
+    width: 70vw;
+    height: 45vh;
+
+    border: 2px solid black;
+    border-radius: 6px;
+}
+.projectImg {
+    position: absolute;
+    top: -7vh;
+    left: -10vw;
+
+    height: 48vh;
+    width: 45vw;
+
+    border: 1px solid black;
+}
+.wandaImg {
+    left: -5vw !important;
+    width: 30vw !important;
+}
+.wandaDesc {
+    position: absolute;
+    top: 3vh;
+    left: 30vw !important;
+}
+.projectDescription {
+    position: absolute;
+    top: 3vh;
+    left: 40vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-right: 2vw;
+
+    font-size: 1.5em;
+    font-family: 'DM Serif Text', serif; /* CHANGED FONT */
+}
+.skillsDesc {
+    color: #c9ac0b;
+    font-size: 1.15em;
+}
+/* css for project titles */
+li > h2 {
+    margin: 0;
+    color: var(--red);
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -3px;
+    line-height: 1.2;
+    position: relative;
+    bottom: 30px;
+    display: inline-block;
+    background-color: white;
+}
+/* css for project progress bar */
+.projectProgressBar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--red);
+    bottom: 50px;
+    transform: scaleX(0);
+}
+.button {
+    height: 5vh;
+    width: 10vw;
+
+    background: var(--tottenham);
+    border: 1px solid white;
+    border-radius: 16px;
+}
+
+
+
+/* css for footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+
+  background: #000000;
+  color: var(--white);
+}
+
+footer p {
+    color: white;
+    font-family: sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+
