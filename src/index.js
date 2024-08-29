@@ -72,7 +72,7 @@ window.addEventListener('scroll', () => {
 
 
 if (window.matchMedia("(min-width: 1024px)").matches) {
-  /** function for 'my work' projects horizontal scroll */
+  console.log('running projects js');
   scroll(
     animate("ul", {
       transform: ["none", `translateX(-${projects.length - 1}00vw)`]

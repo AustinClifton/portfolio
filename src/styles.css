@@ -28,7 +28,7 @@ p {
     line-height: 2.25rem;
 }
 
-a {
+a { /* for poroject buttons */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +67,16 @@ li { /* for projects */
 }
 
 
+/* css for 100vh sections */
+#home-section,
+.aboutMeSection,
+.excellusSection,
+.classlistScroll,
+.skilllistScroll,
+footer {
+    position: relative;
+    height: 100vh;
+}
 
 /* css for main progress bar on top of screen */
 .progress-bar {
@@ -82,18 +92,15 @@ li { /* for projects */
     z-index: 1;
 }
 
-/* css for 100vh sections */
-#main-section,
-.aboutMeSection,
-.excellusSection,
-.classlistScroll,
-.skilllistScroll,
-footer {
-  position: relative;
-  height: 100vh;
-}
+
 
 /* css for first main section */
+#home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .topBar {
     display: flex;
     justify-content: end;
@@ -104,33 +111,29 @@ footer {
     width: 100vw;
     height: 10vh;
 
-    margin: 2vh 3vh;
+    margin: 0.5vh 2vw;
 }
 .icon {
-    height: 6vh;
+    height: 7vh;
+}
 
-    margin: 0 0.2vw;
-}
-#main-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+/* css for name and major/minor */
 .content { 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    height: 50vh;
+
     text-align: center;
-    height: 45vh;
+    
     overflow: hidden;
-    margin: 0 5vw;
 }
 #title {
     margin: 0;
 
     color: white;
-    font-size: 10em;
+    font-size: 12em;
     font-weight: 300;
 }
 #subtitle {
@@ -142,6 +145,7 @@ footer {
 
     opacity: 0;
 }
+/* css for lottie files */
 #animations {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -169,7 +173,7 @@ footer {
     font-family: 'DM Serif Text', serif; /* CHANGED FONT */
 }
 .aboutMeInfo {
-    margin-left: 10vw;
+    margin-left: 12vw;
     width: 70vw;
     height: 100vh;
 }
@@ -178,14 +182,14 @@ footer {
     padding-top: 5vh;
 
     color: #161538;
-    font-size: 4em;
+    font-size: 6em;
     
 }
 .aboutMeInfo sub {
     margin: 0 0 0 5vw;
 
     color: #3a3954;
-    font-size: 2em;
+    font-size: 3em;
 }
 .aboutMeInfo p {
     color: white;
@@ -277,7 +281,7 @@ footer {
     margin: 0 10vw;
 
     color: var(--red);
-    font-size: 4em;
+    font-size: 5em;
 }
 .projectContainer {
     position: relative;
@@ -293,13 +297,13 @@ footer {
     left: -10vw;
 
     height: 48vh;
-    width: 45vw;
+    width: 40vw;
 
     border: 1px solid black;
 }
 .wandaImg {
-    left: -5vw !important;
-    width: 30vw !important;
+    left: -5vw;
+    width: 30vw;
 }
 .wandaDesc {
     position: absolute;
@@ -360,46 +364,26 @@ li > h2 {
 
 /* css for footer */
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  z-index: 1;
+    z-index: 1;
 
-  background: #000000;
-  color: var(--white);
+    background: #000000;
+    color: var(--white);
 }
 
 footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: white;
     font-family: sans-serif;
-    font-size: 2.5em;
+    font-size: 5em;
     font-weight: 700;
+    text-align: center;
+    line-height: 5vh;
 }
 
-
-@media (max-width: 768px) {
-    #title {
-        font-size: 14rem;
-    }
-
-    #subtitle {
-        font-size: 3em;
-    }
-
-    /* queries for project section */
-    ul {
-        display: block;
-    }
-
-    li {
-        height: 75vh;
-    }
-
-    .projectSection {
-        height: fit-content;
-
-        display: flex;
-        flex-direction: column;
-    }
-}

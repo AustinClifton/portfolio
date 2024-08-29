@@ -1,23 +1,81 @@
-@media (max-width: 768px) { 
+@media screen and (max-device-width: 1000px) {
+    /* queries for main section */
     #title {
         font-size: 14em;
     }
-
     #subtitle {
         font-size: 3em;
     }
 
-    /* queries for project section */
-    ul {
-        display: block;
+    #animations {
+        display: none;
     }
-    li {
+    .content {
         height: 75vh;
     }
-    .projectSection {
-        height: fit-content;
 
-        display: flex;
-        flex-direction: column;
+    /* queries for about me section */
+    .aboutMeInfo h2 {
+        font-size: 8em;
+    }
+    .aboutMeInfo sub {
+        font-size: 3.35em;
+    }
+    .aboutMeInfo p {
+        font-size: 3.2em;
+    }
+
+    /* queries for project section */
+    ul { /* for all projects */
+            display: block;
+    }
+    li { /* for each project container */
+        height: 60vh;
+        width: 96vw;
+    }
+
+    .projectSection {
+        height: auto;
+
+    }
+    .projectSection > h2 { /* 'My Work' */
+        position: absolute;
+        top: 1.5vh;
+
+        font-size: 7.5em;
+    }
+    .projectImg {
+        top: -3vh;
+        left: -10vw;
+
+        height: 25vh;
+        width: 68vw;
+    }
+    .projectContainer {
+        margin-top: 7vh;
+    }
+    .wanda {
+        margin-top: 12vh;
+    }
+    .wandaImg {
+        left: -5vw;
+        width: 60vw;
+    }
+    .wandaDesc {
+        position: absolute;
+        top: 22vh;
+        left: 3vw !important;
+    }
+    .projectDescription {
+        top: 22vh;
+        left: 3vw;
+    }
+    .projectDescription p {
+        font-size: 1.5em;
+        line-height: 3.3rem;
+    }
+    .button {
+        height: 3vh;
+        width: 25vw;
     }
 }
