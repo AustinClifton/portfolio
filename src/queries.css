@@ -11,7 +11,8 @@
         display: none;
     }
     .content {
-        height: 75vh;
+        height: 65vh;
+        justify-content: space-around;
     }
 
     /* queries for about me section */
