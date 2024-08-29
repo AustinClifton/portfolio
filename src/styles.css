@@ -3,26 +3,25 @@
 }
 
 body {
-  font-family: "Asar";
-  --yellow: #fbff00;
-  --spurs: #132257;
-  --green: #57eb64;
-  --red: #ca122b;
+    font-family: "Asar";
+    --yellow: #fbff00;
+    --spurs: #132257;
+    --green: #57eb64;
+    --red: #ca122b;
 
-  --excellus: #0099CC;
-  --rit: #F76902;
-  --tottenham: #132257;
+    --excellus: #0099CC;
+    --rit: #F76902;
+    --tottenham: #132257;
 
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 
-  color: black;
-  background: black;
+    background: black;
 
-  overflow-x: hidden !important;
+    overflow-x: hidden;
 
-  overflow: -moz-scrollbars-none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+    overflow: -moz-scrollbars-none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
 p {
@@ -108,10 +107,9 @@ footer {
     margin: 2vh 3vh;
 }
 .icon {
-    height: 50px;
-    width: 50px;
+    height: 6vh;
 
-    margin: 0 0.5vw;
+    margin: 0 0.2vw;
 }
 #main-section {
     display: flex;
@@ -119,14 +117,20 @@ footer {
     align-items: center;
     justify-content: center;
 }
-.content {
+.content { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     text-align: center;
+    height: 45vh;
+    overflow: hidden;
+    margin: 0 5vw;
 }
 #title {
     margin: 0;
 
     color: white;
-    font-size: 8em;
+    font-size: 10em;
     font-weight: 300;
 }
 #subtitle {
@@ -139,11 +143,11 @@ footer {
     opacity: 0;
 }
 #animations {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
 
-  width: 50%;
+    width: 50%;
 }
 .computerLottie {
     grid-column: 1;
@@ -174,7 +178,7 @@ footer {
     padding-top: 5vh;
 
     color: #161538;
-    font-size: 4.5em;
+    font-size: 4em;
     
 }
 .aboutMeInfo sub {
@@ -185,7 +189,7 @@ footer {
 }
 .aboutMeInfo p {
     color: white;
-    font-size: 2.25em;
+    font-size: 2.3em;
     line-height: 1.25em;
 }
 
@@ -247,6 +251,7 @@ footer {
     height: 15vh;
     width: 15vw;
 }
+
 
 
 /* css for skill/class words */
@@ -353,7 +358,6 @@ li > h2 {
 }
 
 
-
 /* css for footer */
 footer {
   display: flex;
@@ -374,3 +378,28 @@ footer p {
 }
 
 
+@media (max-width: 768px) {
+    #title {
+        font-size: 14rem;
+    }
+
+    #subtitle {
+        font-size: 3em;
+    }
+
+    /* queries for project section */
+    ul {
+        display: block;
+    }
+
+    li {
+        height: 75vh;
+    }
+
+    .projectSection {
+        height: fit-content;
+
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,23 @@
+@media (max-width: 768px) { 
+    #title {
+        font-size: 14em;
+    }
+
+    #subtitle {
+        font-size: 3em;
+    }
+
+    /* queries for project section */
+    ul {
+        display: block;
+    }
+    li {
+        height: 75vh;
+    }
+    .projectSection {
+        height: fit-content;
+
+        display: flex;
+        flex-direction: column;
+    }
+}

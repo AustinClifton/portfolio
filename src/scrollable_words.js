@@ -9,13 +9,12 @@ function getNonOverlappingPosition(existingPositions, itemWidth, itemHeight) {
   
   let top, left;
   let attempts = 0;
-  const maxAttempts = 5000000; //prevents an infinite loop
   
   do {
     top = getRandom(0, maxTop);
     left = getRandom(0, maxLeft);
     attempts++;
-  } while (existingPositions.some(p => Math.abs(top - p.top) < itemHeight && Math.abs(left - p.left) < itemWidth) && attempts < maxAttempts);
+  } while (existingPositions.some(p => Math.abs(top - p.top) < itemHeight && Math.abs(left - p.left) < itemWidth));
 
   return { top, left };
 }

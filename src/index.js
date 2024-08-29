@@ -38,7 +38,7 @@ inView('.content', ({ target }) => {
 });
 
 /** function for animating the main section's subtitle */
-animate("#subtitle", { opacity: 1 }, { duration: 5, easing: "ease-out" });
+animate("#subtitle", { opacity: 1 }, { duration: 4, easing: "ease-out" });
 
 /** function for loading & displaying lottiefiles */
 lottieFiles.forEach(file => {
@@ -67,28 +67,34 @@ window.addEventListener('scroll', () => {
     });
 });
 
-/** function for 'my work' projects horizontal scroll */
-scroll(
-  animate("ul", {
-    transform: ["none", `translateX(-${projects.length - 1}00vw)`]
-  }),
-  { target: document.querySelector("section") }
-);
 
-/** function for 'my work' projects titles */
-const segmentLength = 1 / projects.length;
-projects.forEach((project, i) => {
-  const header = project.querySelector("h2");
-  scroll(animate(header, { x: [200, -200] }), {
-    target: document.querySelector("section"),
-    offset: [
-      [i * segmentLength, 1],
-      [(i + 1) * segmentLength, 0]
-    ]
+
+
+
+if (window.matchMedia("(min-width: 1024px)").matches) {
+  /** function for 'my work' projects horizontal scroll */
+  scroll(
+    animate("ul", {
+      transform: ["none", `translateX(-${projects.length - 1}00vw)`]
+    }),
+    { target: document.querySelector("section") }
+  );
+
+  /** function for 'my work' projects titles */
+  const segmentLength = 1 / projects.length;
+  projects.forEach((project, i) => {
+    const header = project.querySelector("h2");
+    scroll(animate(header, { x: [200, -200] }), {
+      target: document.querySelector("section"),
+      offset: [
+        [i * segmentLength, 1],
+        [(i + 1) * segmentLength, 0]
+      ]
+    });
   });
-});
 
-/** function for progress bar for 'my work' section */
-scroll(animate(".projectProgressBar", { scaleX: [0, 1] }), {
-  target: document.querySelector("section")
-});
+  /** function for progress bar for 'my work' section */
+  scroll(animate(".projectProgressBar", { scaleX: [0, 1] }), {
+    target: document.querySelector("section")
+  });
+}
