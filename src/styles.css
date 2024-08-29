@@ -38,6 +38,7 @@ a { /* for poroject buttons */
     color: white;
     text-decoration: none;
     font-family: "Asar";
+    text-align: center;
 }
 
 ul { /* for projects */

@@ -4,9 +4,9 @@ const getRandom = (min, max) => Math.random() * (max - min) + min;
 
 /** function to generate a non-overlapping position in a container */
 function getNonOverlappingPosition(existingPositions, itemWidth, itemHeight) {
-  const maxTop = window.innerHeight - itemHeight;
-  const maxLeft = window.innerWidth - itemWidth;
-  
+  const maxTop = document.documentElement.clientHeight - itemHeight;
+  const maxLeft = document.documentElement.clientWidth - itemWidth;
+
   let top, left;
   let attempts = 0;
   
@@ -14,12 +14,16 @@ function getNonOverlappingPosition(existingPositions, itemWidth, itemHeight) {
     top = getRandom(0, maxTop);
     left = getRandom(0, maxLeft);
     attempts++;
-  } while (existingPositions.some(p => Math.abs(top - p.top) < itemHeight && Math.abs(left - p.left) < itemWidth));
+  } while (
+    existingPositions.some(
+      (p) => Math.abs(top - p.top) < itemHeight && Math.abs(left - p.left) < itemWidth
+    ) && attempts < 1000000
+  );
 
   return { top, left };
 }
 
-/** function used to initialize scroll-tracked containers */ 
+/** function used to initialize scroll-tracked containers */
 function initializeScrollContainer(containerId) {
   const container = document.getElementById(containerId);
   const items = container.querySelectorAll('.skillItem, .classItem');
@@ -28,13 +32,11 @@ function initializeScrollContainer(containerId) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.style.opacity = entry.intersectionRatio;
-      }
-      else {
+      } else {
         entry.target.style.opacity = 0;
       }
     });
   }, {
-    //thresholds that determine when each skill item should appear
     threshold: [0.2, 0.4, 0.6, 0.8, 1]
   });
 
@@ -43,8 +45,7 @@ function initializeScrollContainer(containerId) {
     item.style.color = getRandomColor(colors);
     if (container.id.startsWith('scroll2')) {
       item.style.fontSize = `${getRandom(2, 2.5)}em`;
-    }
-    else {
+    } else {
       item.style.fontSize = `${getRandom(2.5, 5)}em`;
     }
 
@@ -62,6 +63,6 @@ function initializeScrollContainer(containerId) {
   });
 }
 
-//initialize scroll1 and scroll2
+// Initialize scroll1 and scroll2
 initializeScrollContainer('scroll1');
 initializeScrollContainer('scroll2');
