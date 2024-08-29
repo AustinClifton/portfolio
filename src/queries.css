@@ -28,7 +28,7 @@
 
     /* queries for project section */
     ul { /* for all projects */
-            display: block;
+        display: block;
     }
     li { /* for each project container */
         height: 60vh;
@@ -37,23 +37,32 @@
 
     .projectSection {
         height: auto;
-
     }
     .projectSection > h2 { /* 'My Work' */
         position: absolute;
-        top: 1.5vh;
+        top: 1.25vh;
 
         font-size: 7.5em;
     }
     .projectImg {
         top: -3vh;
-        left: -10vw;
+        left: -5vw;
 
-        height: 25vh;
-        width: 68vw;
+        height: 32vh;
+        width: 80vw;
     }
-    .projectContainer {
+    .projectContainer {  
+        width: 80vw;
+        height: 65vh;
         margin-top: 7vh;
+    }
+    .projectDescription {
+        top: 28vh;
+        left: 3vw;
+    }
+    .projectDescription p {
+        font-size: 1.6em;
+        line-height: 3.3rem;
     }
     .wanda {
         margin-top: 12vh;
@@ -67,15 +76,10 @@
         top: 22vh;
         left: 3vw !important;
     }
-    .projectDescription {
-        top: 22vh;
-        left: 3vw;
-    }
-    .projectDescription p {
-        font-size: 1.5em;
-        line-height: 3.3rem;
-    }
     .button {
+        position:absolute;
+        top: 17.25vh;
+        z-index: 1;
         height: 3vh;
         width: 25vw;
     }
