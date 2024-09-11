@@ -67,10 +67,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-
-
-
-
+//check if the device is a mobile device
 if (window.matchMedia("(min-width: 1024px)").matches) {
   console.log('running projects js');
   scroll(
@@ -84,7 +81,7 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
   const segmentLength = 1 / projects.length;
   projects.forEach((project, i) => {
     const header = project.querySelector("h2");
-    scroll(animate(header, { x: [200, -200] }), {
+    scroll(animate(header, { x: [150, -200] }), { //coords for where the project title is in relation to the bottom border of the project container
       target: document.querySelector("section"),
       offset: [
         [i * segmentLength, 1],

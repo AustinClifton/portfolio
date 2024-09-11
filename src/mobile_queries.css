@@ -11,7 +11,7 @@
         display: none;
     }
     .content {
-        height: 65vh;
+        height: 40vh;
         justify-content: space-around;
     }
 
@@ -23,7 +23,7 @@
         font-size: 3.35em;
     }
     .aboutMeInfo p {
-        font-size: 3.2em;
+        font-size: 3.5em;
     }
 
     .classlistScroll, .skilllistScroll {
@@ -38,10 +38,11 @@
     li { /* for each project container */
         height: 60vh;
         width: 96vw;
+        padding: 2vh 0;
     }
 
     .projectSection {
-        height: auto;
+        height: fit-content;
     }
     .projectSection > h2 { /* 'My Work' */
         position: absolute;
@@ -57,29 +58,30 @@
         width: 80vw;
     }
     .projectContainer {  
+        height: 60vh;
         width: 80vw;
-        height: 65vh;
-        margin-top: 7vh;
+        margin-bottom: 2.5vh;
     }
     .projectDescription {
-        top: 28vh;
+        top: 30vh;
         left: 3vw;
+        height: max-content;
     }
     .projectDescription p {
-        font-size: 1.6em;
-        line-height: 3.3rem;
+        font-size: 2.5em;
+        line-height: 4rem;
     }
     .wanda {
-        margin-top: 12vh;
+        margin-top: 5vh;
     }
     .wandaImg {
         left: -5vw;
         width: 60vw;
     }
     .wandaDesc {
-        position: absolute;
-        top: 28vh;
+        top: 30vh;
         left: 3vw !important;
+        height: 13vh;
     }
     .skillsDesc {
         display: none;

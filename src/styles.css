@@ -313,6 +313,13 @@ footer {
     left: -5vw;
     width: 30vw;
 }
+.excellusLogo {
+    position: absolute;
+    top: 39.5vh;
+    left: 54.5vw;
+
+    width: 15vw;
+}
 .projectDescription {
     position: absolute;
     top: 3vh;
@@ -398,7 +405,7 @@ footer p {
     justify-content: center;
     align-items: center;
 
-    color: white;
+    color: var(--rit);
     font-family: sans-serif;
     font-size: 5vw;
     font-weight: 700;
