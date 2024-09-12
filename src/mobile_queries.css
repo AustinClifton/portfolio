@@ -67,9 +67,12 @@
         width: 75vw;
 
         left: 2vw;
+    }  
+    .skillsDesc {
+        display: none;
     }
     .projectContainer {  
-        height: 60vh;
+        height: 51vh;
         width: 80vw;
         margin-bottom: 2.5vh;
     }
@@ -90,14 +93,18 @@
     li>h2 {
         font-size: 4em;
     }
+    .buttonWrapper {
+        width: 100%;
+
+        display: flex;
+        justify-content: end;
+    }
     .button {
-        position:absolute;
-        top: 17vh;
-        left: 40vw;
-        z-index: 1;
-        height: 3vh;
+        position: relative;
+        height: 4vh;
         width: 25vw;
-        font-size: 1.75em;
-        font-size: 'DM Serif Text', serif;
+        font-size: 2.5em;
+
+        margin-top: 0;
     }
 }
