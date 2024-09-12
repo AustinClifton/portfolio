@@ -16,7 +16,7 @@ body {
     padding: 0;
     margin: 0;
 
-    background: black;
+    background: white;
 
     overflow-x: hidden;
 
@@ -325,8 +325,6 @@ footer {
     top: 3vh;
     left: 35vw;
 
-    height: 40vh;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -344,6 +342,10 @@ footer {
 /* extra css for wanda project section */
 .wandaDesc {
     left: 30vw !important;
+}
+#wanda {
+    left: -5vw;
+    width: 33vw;
 }
 .skillsDesc {
     color: #c9ac0b;

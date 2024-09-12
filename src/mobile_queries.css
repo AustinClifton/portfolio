@@ -17,7 +17,7 @@
 
     /* queries for about me section */
     .aboutMeInfo h2 {
-        font-size: 8em;
+        font-size: 6.5em;
     }
     .aboutMeInfo sub {
         font-size: 3.35em;
@@ -34,28 +34,39 @@
     /* queries for project section */
     ul { /* for all projects */
         display: block;
+        padding: 0;
     }
     li { /* for each project container */
         height: 60vh;
-        width: 96vw;
-        padding: 2vh 0;
+        width: 100vw;
+
+        margin: 2.5vh 0;
+        overflow:visible;
     }
 
     .projectSection {
         height: fit-content;
     }
     .projectSection > h2 { /* 'My Work' */
-        position: absolute;
-        top: 1.25vh;
+        position: relative;
+        top: 2vh;
 
-        font-size: 7.5em;
+        font-size: 8.5em;
     }
     .projectImg {
-        top: -3vh;
+        height: 32vh;
+        width: 90vw;
+
+        top: -4vh;
         left: -5vw;
 
+        border: 3px solid black;
+    }
+    #wanda {
         height: 32vh;
-        width: 80vw;
+        width: 75vw;
+
+        left: 2vw;
     }
     .projectContainer {  
         height: 60vh;
@@ -65,25 +76,15 @@
     .projectDescription {
         top: 30vh;
         left: 3vw;
-        height: max-content;
     }
     .projectDescription p {
         font-size: 2.5em;
         line-height: 4rem;
     }
-    .wanda {
-        margin-top: 5vh;
-    }
-    .wandaImg {
-        left: -5vw;
-        width: 60vw;
-    }
     .wandaDesc {
-        top: 30vh;
         left: 3vw !important;
-        height: 13vh;
     }
-    .skillsDesc {
+    .excellusLogo {
         display: none;
     }
     li>h2 {
@@ -92,6 +93,7 @@
     .button {
         position:absolute;
         top: 17vh;
+        left: 40vw;
         z-index: 1;
         height: 3vh;
         width: 25vw;
