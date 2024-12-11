@@ -7,9 +7,6 @@
         font-size: 3em;
     }
 
-    #animations {
-        display: none;
-    }
     .content {
         height: 40vh;
         justify-content: space-around;
@@ -17,13 +14,13 @@
 
     /* queries for about me section */
     .aboutMeInfo h2 {
-        font-size: 6.5em;
+        font-size: 6.75em;
     }
     .aboutMeInfo sub {
-        font-size: 3.35em;
+        font-size: 3.25em;
     }
     .aboutMeInfo p {
-        font-size: 3.5em;
+        font-size: 3.25em;
     }
 
     .classlistScroll, .skilllistScroll {
@@ -68,13 +65,11 @@
 
         left: 2vw;
     }  
-    .skillsDesc {
-        display: none;
-    }
     .projectContainer {  
+        position: relative;
         height: 51vh;
         width: 80vw;
-        margin-bottom: 2.5vh;
+        margin-bottom: 1.75vh;
     }
     .projectDescription {
         top: 30vh;
@@ -82,29 +77,59 @@
     }
     .projectDescription p {
         font-size: 2.5em;
-        line-height: 4rem;
+        line-height: 2.8rem;
     }
     .wandaDesc {
         left: 3vw !important;
     }
+    .foodieImg {
+        width: 50vw;
+        height: 33vh;
+        border: none;
+    }
+    .mainFoodieImg {
+        z-index: 4;
+    }
     .excellusLogo {
-        display: none;
+        top: 46vh;
+        left: 50vw;
+        width: 270px;
     }
     li>h2 {
         font-size: 4em;
     }
-    .buttonWrapper {
-        width: 100%;
 
-        display: flex;
-        justify-content: end;
+    .buttonWrapper {
+        position:absolute;
+        top: 15vh;
     }
     .button {
-        position: relative;
         height: 4vh;
-        width: 25vw;
+        width: 35vw;
         font-size: 2.5em;
 
         margin-top: 0;
+    }
+
+
+
+    .imageWrapper {
+        left: 50px;
+    }
+    .overlayImg {
+        display: block;
+        opacity: 1;
+        width: 35vw;
+        height: 30vh;
+    }
+    .overlayImg:nth-child(2) {
+        top: -60px;
+        left: 175px;
+        z-index: 3;
+    }
+    .overlayImg:nth-child(3) {
+        top: -60px;
+        left: 275px;
+        z-index: 2;
     }
 }

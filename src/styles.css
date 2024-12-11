@@ -16,7 +16,7 @@ body {
     padding: 0;
     margin: 0;
 
-    background: white;
+    background: black;
 
     overflow-x: hidden;
 
@@ -194,7 +194,7 @@ footer {
 }
 .aboutMeInfo p {
     color: white;
-    font-size: 2.75vw;
+    font-size: 2.5vw;
     line-height: 1.25em;
 }
 
@@ -310,6 +310,19 @@ footer {
 
     border: none;
 }
+.imageWrapper {
+    position: relative;
+    display: flex;
+}
+/* Hide overlay images on large screens */
+.overlayImg {
+    display: none;
+}
+
+
+
+
+
 .excellusLogo {
     position: absolute;
     top: 43vh;
@@ -378,6 +391,10 @@ li > h2 {
 }
 
 /* css for href button */
+.buttonWrapper {
+    position: fixed;
+    top: 65.5vh;
+}
 .button {
     height: 5vh;
     width: 20vw;
@@ -390,7 +407,6 @@ li > h2 {
     border: 1px solid white;
     border-radius: 16px;
 }
-
 
 /* css for footer */
 footer {
