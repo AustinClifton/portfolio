@@ -65,7 +65,7 @@
     }
     .projectContainer {  
         position: relative;
-        height: 53vh;
+        height: 55vh;
         width: 80vw;
         margin-bottom: 1.75vh;
     }
@@ -115,7 +115,8 @@
     /* queries for foodie project images */
     .foodieImg {
         width: 50vw;
-        height: 35vh;
+        height: 38vh;
+        top: -140px;
         border: none;
     }
     .mainFoodieImg {
@@ -128,15 +129,15 @@
         display: block;
         opacity: 1;
         width: 35vw;
-        height: 32vh;
+        height: 35vh;
     }
     .overlayImg:nth-child(2) {
-        top: -60px;
+        top: -110px;
         left: 175px;
         z-index: 3;
     }
     .overlayImg:nth-child(3) {
-        top: -60px;
+        top: -110px;
         left: 275px;
         z-index: 2;
     }
