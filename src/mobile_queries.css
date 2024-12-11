@@ -1,15 +1,16 @@
 @media screen and (max-device-width: 1000px) {
     /* queries for main section */
-    body {
-        max-width: 100%;
-    }
     #title {
         font-size: 14em;
     }
     #subtitle {
         font-size: 3em;
     }
+    #animations {
+        display: none
+    }
 
+    /* name and major */
     .content {
         height: 40vh;
         justify-content: space-around;
@@ -26,9 +27,10 @@
         font-size: 3.25em;
     }
 
+    /* queries for class & skill section */
     .classlistScroll, .skilllistScroll {
         height: 85vh;
-        font-size: 1.4em;
+        font-size: 1.35em;
     }
 
     /* queries for project section */
@@ -43,7 +45,6 @@
         margin: 2.5vh 0;
         overflow:visible;
     }
-
     .projectSection {
         height: fit-content;
     }
@@ -62,15 +63,9 @@
 
         border: 3px solid black;
     }
-    #wanda {
-        height: 32vh;
-        width: 75vw;
-
-        left: 2vw;
-    }  
     .projectContainer {  
         position: relative;
-        height: 51vh;
+        height: 53vh;
         width: 80vw;
         margin-bottom: 1.75vh;
     }
@@ -82,30 +77,17 @@
         font-size: 2.5em;
         line-height: 2.8rem;
     }
-    .wandaDesc {
-        left: 3vw !important;
-    }
-    .foodieImg {
-        width: 50vw;
-        height: 33vh;
-        border: none;
-    }
-    .mainFoodieImg {
-        z-index: 4;
-    }
-    .excellusLogo {
-        top: 46vh;
-        left: 50vw;
-        width: 270px;
-    }
-    li>h2 {
+    /* project title */
+    li > h2 {
         font-size: 4em;
+        margin-bottom: 20px;
+    }
+    /* project url button */
+    .buttonWrapper {
+        position: absolute;
+        top: 16vh;
     }
 
-    .buttonWrapper {
-        position:absolute;
-        top: 15vh;
-    }
     .button {
         height: 4vh;
         width: 35vw;
@@ -114,8 +96,31 @@
         margin-top: 0;
     }
 
+    /* queries for wanda project + wanda image */
+    .wandaDesc {
+        left: 3vw !important;
+    }
+    #wanda {
+        height: 32vh;
+        width: 75vw;
 
+        left: 2vw;
+    }
+    .excellusLogo {
+        top: 47.5vh;
+        left: 50vw;
+        width: 270px;
+    }
 
+    /* queries for foodie project images */
+    .foodieImg {
+        width: 50vw;
+        height: 35vh;
+        border: none;
+    }
+    .mainFoodieImg {
+        z-index: 4;
+    }
     .imageWrapper {
         left: 50px;
     }
@@ -123,7 +128,7 @@
         display: block;
         opacity: 1;
         width: 35vw;
-        height: 30vh;
+        height: 32vh;
     }
     .overlayImg:nth-child(2) {
         top: -60px;
