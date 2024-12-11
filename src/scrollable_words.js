@@ -63,6 +63,6 @@ function initializeScrollContainer(containerId) {
   });
 }
 
-// Initialize scroll1 and scroll2
+//Initialize scroll1 and scroll2
 initializeScrollContainer('scroll1');
 initializeScrollContainer('scroll2');

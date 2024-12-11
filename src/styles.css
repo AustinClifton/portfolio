@@ -67,7 +67,6 @@ li { /* for projects */
   list-style: none;
 }
 
-
 /* css for 100vh sections */
 #home-section,
 .aboutMeSection,
@@ -92,8 +91,6 @@ footer {
 
     z-index: 1;
 }
-
-
 
 /* css for first main section */
 #home-section {
@@ -172,8 +169,6 @@ footer {
     width: 35vw;
 }
 
-
-
 /* css for 'about me' section */
 .aboutMeSection {
     font-family: 'DM Serif Text', serif; /* CHANGED FONT */
@@ -203,10 +198,8 @@ footer {
     line-height: 1.25em;
 }
 
-
-
 /* css for excellus section */
-.excellusSection {
+/* .excellusSection {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-row: 1fr;
@@ -237,7 +230,7 @@ footer {
 }
 .excellusInfo {
     font-size: 1.5em;
-    font-family: 'DM Serif Text', serif; /* CHANGED FONT */
+    font-family: 'DM Serif Text', serif;
     text-align: center;
 
     background: #0099CC;
@@ -260,9 +253,7 @@ footer {
 
     height: 15vh;
     width: 15vw;
-}
-
-
+} */
 
 /* css for skill/class words */
 .skillItem, .classItem {
@@ -270,8 +261,6 @@ footer {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-
-
 
 /* css for 'my work' section */
 .projectSection {
@@ -313,10 +302,18 @@ footer {
     left: -5vw;
     width: 30vw;
 }
+.foodieImg {
+    top: -10vh;
+    left: 0;
+    height: 70vh;
+    width: 25vw;
+
+    border: none;
+}
 .excellusLogo {
     position: absolute;
-    top: 39.5vh;
-    left: 54.5vw;
+    top: 43vh;
+    left: 54vw;
 
     width: 15vw;
 }
@@ -332,13 +329,14 @@ footer {
 
     margin: 0 2vw;
 
-    font-family: 'DM Serif Text', serif; /* CHANGED FONT */
+    font-family: 'DM Serif Text', serif;
 }
 .projectDescription p {
-    font-size: clamp(1.15rem, 2vw, 3em);
+    font-size: clamp(1.15rem, 2vw, 2.2em);
     line-height: 1.5em;
     margin: 0;
 }
+
 /* extra css for wanda project section */
 .wandaDesc {
     left: 30vw !important;
@@ -351,10 +349,11 @@ footer {
     color: #c9ac0b;
     font-size: 1.15em;
 }
+
 /* css for project titles */
 li > h2 {
     position: relative;
-    bottom: -0.5vh;
+    bottom: -1.2vh;
 
     margin: 0;
 
@@ -366,6 +365,7 @@ li > h2 {
     background-color: white;
     padding: 2px 5px 0 0;
 }
+
 /* css for project progress bar */
 .projectProgressBar {
     position: fixed;
@@ -376,9 +376,11 @@ li > h2 {
     bottom: 50px;
     transform: scaleX(0);
 }
+
+/* css for href button */
 .button {
     height: 5vh;
-    width: 10vw;
+    width: 20vw;
 
     margin-top: 1vh;
 
@@ -401,7 +403,6 @@ footer {
     background: #000000;
     color: var(--white);
 }
-
 footer p {
     display: flex;
     justify-content: center;
